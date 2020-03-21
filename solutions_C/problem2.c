@@ -3,7 +3,7 @@
 int main ()
 {
 	int f1 = 0, f2 = 1, f3 = f1 + f2 ;
-	int	sum = 0 ;
+	int sum = 0 ;
 
 	while (f3 < 4000000)
 	{	
