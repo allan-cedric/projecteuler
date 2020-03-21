@@ -23,9 +23,9 @@ int main ()
 				largest = i ;
 				mult *= i ;
 			}
+			if (mult == NUM)
+				break ;
 		}
-		if (mult ==	NUM)
-			break ;	
 	}
 
 	printf ("Largest prime factor: %ld\n",largest) ;	
