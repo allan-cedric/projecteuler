@@ -10,8 +10,7 @@ int main ()
 		{
 			c = sqrt (a*a+b*b) ;
 			if ((c == (int) c) && (a+b+c == 1000))
-				break ;
-				
+				break ;				
 		}
 		if (a+b+c == 1000)
 			break ;
