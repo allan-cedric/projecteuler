@@ -11,12 +11,7 @@ int main ()
 	unsigned long int num = 17 ;
 	unsigned long int i ;
 	for (i = 6; i < 10001; num += 2)
-	{
-		if (is_prime(num))
-		{
-			i++ ;
-		}
-	}
+		if (is_prime(num)) {i++ ;} 
 	num -= 2 ;
 	printf ("%list prime: %li\n",i,num) ;	
 
