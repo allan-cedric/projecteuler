@@ -13,19 +13,19 @@ int main ()
 	unsigned long int i ;
 	unsigned long int mult = 1 ;
 	unsigned long int largest = 0 ;
+	unsigned long int num = NUM ;
 	
-	for (i = 2 ; i <= NUM; i++)
+	for (i = 2 ; i <= NUM;)
 	{
-		if (NUM % i == 0)
+		if ((num % i == 0) && (is_prime(i)))
 		{
-			if (is_prime(i))
-			{
-				largest = i ;
-				mult *= i ;
-			}
+			num = num/i ;
+			largest = i ;
+			mult *= i ;
 			if (mult == NUM)
 				break ;
 		}
+		else i++ ;
 	}
 
 	printf ("Largest prime factor: %ld\n",largest) ;	
