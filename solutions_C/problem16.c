@@ -4,6 +4,7 @@ int main ()
 {
 	int v[1000000] ;
 	int i = 0 ;
+	/* Input => 2**1000 */
 	while (!feof(stdin))
 		scanf ("%i",&v[i++]) ;
 
