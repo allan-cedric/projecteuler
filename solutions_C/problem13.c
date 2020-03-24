@@ -1,5 +1,4 @@
 #include <stdio.h>
-#include <stdlib.h>
 
 /*
 	Return a integer value of a digit
