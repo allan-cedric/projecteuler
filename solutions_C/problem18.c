@@ -35,4 +35,3 @@ void maximum_total (int m[15][15], int i, int j, int sum, int *largest)
 	else if (sum > *largest)
 		*largest = sum ;
 }
-
