@@ -1,15 +1,17 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-void maximum_total (int mat[15][15], int i, int j, int sum, int *largest) ;
+#define MAX 15
+
+void maximum_total (int mat[MAX][MAX], int i, int j, int sum, int *largest) ;
 
 int main ()
 {
-	int mat[15][15] ;
+	int mat[MAX][MAX] ;
 	int i, j ;
-	char str[10];
+	char str[MAX];
 	/* Input */
-	for (i = 0; i < 15; i++)
+	for (i = 0; i < MAX; i++)
 	{
 		for (j = 0; j <= i; j++)
 		{
@@ -25,14 +27,13 @@ int main ()
 	return 0 ;
 }
 
-void maximum_total (int m[15][15], int i, int j, int sum, int *largest)
+void maximum_total (int m[MAX][MAX], int i, int j, int sum, int *largest)
 {	
-	if (i < 15)
+	if (i < MAX)
 	{
 		sum += m[i][j] ;
 		maximum_total (m,i+1,j+1,sum,largest) ;
 		maximum_total (m,i+1,j,sum,largest) ;
 	}
-	else if (sum > *largest)
-		*largest = sum ;
+	else if (sum > *largest) *largest = sum ;
 }
