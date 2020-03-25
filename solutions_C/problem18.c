@@ -8,6 +8,7 @@ int main ()
 	int mat[15][15] ;
 	int i, j ;
 	char str[10];
+	/* Input */
 	for (i = 0; i < 15; i++)
 	{
 		for (j = 0; j <= i; j++)
