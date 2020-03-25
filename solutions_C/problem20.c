@@ -1,6 +1,9 @@
 #include <stdio.h>
 #include <stdlib.h>
 
+/*
+	Transform a digit into a valid integer
+*/
 int digit (char ch) ; 
 
 int main ()
