@@ -17,7 +17,7 @@ int main ()
 				a += 2 ;
 				if (month != 4 && month != 6 && month != 9 && month != 11) a++ ;
 			}
-			else if (!(year % 4)) a++ ;
+			else if (!(year % 4) && (year % 100 || !(year % 400))) a++ ;
 			a %= 7 ;
 			if (a == SUNDAY) number_sundays++ ;
 		}
