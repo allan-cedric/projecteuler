@@ -8,7 +8,7 @@ int main ()
 {
 	int POSITION = 1000000 ;
 	int v[MAX] ;
-	int i, j = 0, f = 0, sum = 0 ;
+	int i, j, f = 0, sum = 0 ;
 	for (i = 0; i < MAX; i++) *(v+i) = 0 ;
 
 	f = factorial(MAX) ;
@@ -16,27 +16,22 @@ int main ()
 
 	printf ("Millionth permutation: ") ;
 	i = MAX-1 ;			
-	while (sum < POSITION && j < MAX)
+	while (sum < POSITION)
 	{
-		if (!*(v+j))
+		j = 0 ;
+		f = factorial(i--) ;
+		while (*(v+j)) j++ ;
+		while (!*(v+j))
 		{
-			j = 0 ;
-			f = factorial(i) ;
-			while (*(v+j)) j++ ;
-			while (j < MAX && !*(v+j))
+			if (f+sum < POSITION)
 			{
-				if (f+sum < POSITION)
-				{
-					sum += f ;
-					while (*(v+(++j))){}
-				}
-				else *(v+j) = 1 ;
+				sum += f ;
+				while (*(v+(++j))){}
 			}
-			printf ("%i",j) ;
-			if (f+sum == POSITION) break ;
-			i-- ;
-			j = 0 ;
-		}else j++ ;
+			else *(v+j) = 1 ;
+		}
+		printf ("%i",j) ;
+		if (f+sum == POSITION) break ;
 	}
 	for (i = MAX-1; i >= 0; i--)
 	{
