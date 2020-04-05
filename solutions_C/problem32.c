@@ -8,9 +8,9 @@ int main()
     int numbers[10000];
     for (i = 1; i < 10000; i++)
         numbers[i] = 0;
-    for (a = 2; a < ((9999 / a) + (9999 % a)); a++)
+    for (a = 2; a < 10000; a++)
     {
-        for (b = a + 1; b < ((9999 / a) + (9999 % a)); b++)
+        for (b = a + 1; (a * b) < 10000; b++)
             sum += PandigitalProduct(a, b, numbers);
     }
     printf("Sum: %i\n", sum);
