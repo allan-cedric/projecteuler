@@ -35,7 +35,7 @@ int is_palindrome_2(int n)
     while (n)
     {
         binary[i++] = n % 2;
-        n /= 2;
+        n >>= 1;
     }
     int j;
     i--;
